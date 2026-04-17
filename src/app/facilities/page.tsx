@@ -3,7 +3,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/shared/PageHero";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { 
   Wifi, 
   Shield, 
@@ -15,12 +15,12 @@ import {
   ChevronRight
 } from "lucide-react";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: "easeOut" } },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.15 } },
 };

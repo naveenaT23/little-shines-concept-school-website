@@ -4,7 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/shared/PageHero";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { clsx } from "clsx";
 
 const activityCategories = ["All", "Sports", "Arts", "Cultural", "Science"];
@@ -20,12 +20,12 @@ const activities = [
   { title: "Science Fair", category: "Science", image: "/activity_science_fair_1776351705927.png" },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.12 } },
 };

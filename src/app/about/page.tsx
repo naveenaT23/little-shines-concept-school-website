@@ -3,16 +3,16 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageHero from "@/components/shared/PageHero";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { CheckCircle2, Target, Eye, Heart } from "lucide-react";
 import confetti from 'canvas-confetti';
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.15 } },
 };
